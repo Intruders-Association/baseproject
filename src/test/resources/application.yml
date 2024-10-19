@@ -1,3 +1,4 @@
 spring:
   datasource:
-    url: jdbc:tc:postgresql:13.3:///fakedb
+    url: jdbc:tc:postgresql:16.3:///postgres
+#    url: jdbc:tc:postgresql:13.3:///fakedb

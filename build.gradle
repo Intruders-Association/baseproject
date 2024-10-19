@@ -9,7 +9,7 @@ plugins {
 
 group = 'dev.slabuzov'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '19'
+sourceCompatibility = '17'
 
 configurations {
 	compileOnly {
@@ -29,7 +29,7 @@ dependencies {
 	runtimeOnly 'org.postgresql:postgresql'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	testImplementation "org.testcontainers:postgresql:1.17.6"
+	testImplementation 'org.testcontainers:postgresql:1.20.0'
 }
 
 tasks.named('test') {
@@ -42,8 +42,9 @@ checkstyle {
 
 sonar {
 	properties {
-		property 'sonar.host.url', System.getenv('SONAR_HOST_URL')
-		property 'sonar.login', System.getenv('SONAR_LOGIN')
+		property 'sonar.host.url', 'http://localhost:9000/'
+		property 'sonar.login', 'admin'
+		property 'sonar.password', 'nimda'
 	}
 }
 

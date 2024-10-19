@@ -4,3 +4,7 @@ services:
     image: sonarqube:9.9.0-community
     ports:
       - '9000:9000'
+
+
+#login/password = admin/admin
+#new login/password = admin/nimda
